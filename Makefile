@@ -17,6 +17,6 @@ restart: clean build
 clean:
 	docker compose -f $(YML_PATH) down -v
 
-fclean:
+fclean: clean
 	sudo rm -rf $(DATA_PATH)/*/*
 	docker system prune -af

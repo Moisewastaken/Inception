@@ -12,7 +12,7 @@ else
 	sleep 5
 	wp config create --allow-root --dbname=$SQL_DATABASE --dbuser=$SQL_USER --dbpass=$SQL_PASSWORD --dbhost=mariadb:3306 --skip-check
 	wp core install --allow-root --url=$DOMAIN_NAME --title=$SITE_TITLE --admin_user=$WP_ADMIN --admin_password=$WP_ADMIN_PASS --admin_email=$WP_ADMIN_EMAIL --skip-email
-	wp user create --allow-root $USER1 $USER1_EMAIL --user_pass=$USER1_PASS --role='editor'
+	wp user create --allow-root $USER1 $USER1_EMAIL --user_pass=$USER1_PASS --role='contributor'
 fi
 
 exec "$@"
